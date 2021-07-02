@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090AA590268CABEF00C55981 /* DeferredDemo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 090AA58E268CABEF00C55981 /* DeferredDemo.cpp */; };
+		090AA593268CC13900C55981 /* VulkanglTFModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 090AA591268CC13900C55981 /* VulkanglTFModel.cpp */; };
 		09A9DE5D267CF2A00026AF46 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A9DE5C267CF2A00026AF46 /* libglfw.3.3.dylib */; };
 		09A9DE61267CF2CB0026AF46 /* libvulkan.1.2.176.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A9DE60267CF2CB0026AF46 /* libvulkan.1.2.176.dylib */; };
 		09A9DE65267CF4120026AF46 /* libvulkan.1.2.176.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09A9DE63267CF4120026AF46 /* libvulkan.1.2.176.dylib */; };
@@ -50,6 +52,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		090AA58E268CABEF00C55981 /* DeferredDemo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DeferredDemo.cpp; sourceTree = "<group>"; };
+		090AA58F268CABEF00C55981 /* DeferredDemo.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DeferredDemo.hpp; sourceTree = "<group>"; };
+		090AA591268CC13900C55981 /* VulkanglTFModel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VulkanglTFModel.cpp; sourceTree = "<group>"; };
+		090AA592268CC13900C55981 /* VulkanglTFModel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VulkanglTFModel.hpp; sourceTree = "<group>"; };
 		09A9DE4E267CEAC00026AF46 /* vulkan */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = vulkan; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A9DE5C267CF2A00026AF46 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../usr/local/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
 		09A9DE5E267CF2C80026AF46 /* libvulkan.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libvulkan.1.dylib; path = ../../../usr/local/lib/libvulkan.1.dylib; sourceTree = "<group>"; };
@@ -187,6 +193,8 @@
 		09A9DE82268604800026AF46 /* include */ = {
 			isa = PBXGroup;
 			children = (
+				090AA592268CC13900C55981 /* VulkanglTFModel.hpp */,
+				090AA58F268CABEF00C55981 /* DeferredDemo.hpp */,
 				09A9DEB726879D8B0026AF46 /* SyncObject.hpp */,
 				09A9DEB426877DD80026AF46 /* LoadModel.hpp */,
 				09A9DEB1268779420026AF46 /* Sampler.hpp */,
@@ -225,6 +233,8 @@
 				09A9DEB0268779420026AF46 /* Sampler.cpp */,
 				09A9DEB326877DD80026AF46 /* LoadModel.cpp */,
 				09A9DEB626879D8B0026AF46 /* SyncObject.cpp */,
+				090AA58E268CABEF00C55981 /* DeferredDemo.cpp */,
+				090AA591268CC13900C55981 /* VulkanglTFModel.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -285,12 +295,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				090AA590268CABEF00C55981 /* DeferredDemo.cpp in Sources */,
 				09A9DEA62687037D0026AF46 /* CommandPool.cpp in Sources */,
 				09A9DE8A2686093D0026AF46 /* PhysicalDevice.cpp in Sources */,
 				09A9DE972686E2190026AF46 /* SwapChain.cpp in Sources */,
 				09A9DE9D2686EFA00026AF46 /* RenderPass.cpp in Sources */,
 				09A9DE8D26860E8A0026AF46 /* VulkanRHI.cpp in Sources */,
 				09A9DE9A2686E9050026AF46 /* ImageView.cpp in Sources */,
+				090AA593268CC13900C55981 /* VulkanglTFModel.cpp in Sources */,
 				09A9DEA926870BE50026AF46 /* FrameBuffer.cpp in Sources */,
 				09A9DEB2268779420026AF46 /* Sampler.cpp in Sources */,
 				09A9DEAC26876DEA0026AF46 /* Buffer.cpp in Sources */,

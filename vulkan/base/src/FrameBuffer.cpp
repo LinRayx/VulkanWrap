@@ -24,8 +24,6 @@ void FrameBuffer::createFramebuffers() {
         std::array<VkImageView, 3> attachments = {
             m_ImageView->GetColorImageView(),
             m_ImageView->GetDepthImageView(),
-//            colorImageView,
-//            depthImageView,
             swapChainImageViews[i]
         };
 

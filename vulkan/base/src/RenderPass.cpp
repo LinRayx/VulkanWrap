@@ -95,7 +95,7 @@ KYPtr<SwapChain> RenderPass::GetSwapChain() {
     return m_SwapChain;
 }
 
-VkRenderPass RenderPass::GetRenderPass() { 
+VkRenderPass RenderPass::GetRenderPass() {
     return renderPass;
 }
 

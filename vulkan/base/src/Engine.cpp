@@ -13,12 +13,6 @@ KYPtr<VulkanRHI> Engine::GetVulkanRHI() {
     return m_VulkanRHI;
 }
 
-Engine* Engine::GetInstance() {
-    if (m_Engine == nullptr) {
-        m_Engine = new Engine;
-    }
-    return m_Engine;
-}
 
 void Engine::Run() {
     Init();
@@ -71,6 +65,7 @@ void Engine::InitVulkan() {
     m_Pipeline->createCommandBuffers();
     m_SyncObject->createSyncObjects();
 }
+
 
 void Engine::InitWindow() { 
     glfwInit();
@@ -251,5 +246,19 @@ void Engine::cleanupSwapChain() {
     m_Descriptor->cleanupSwapChain();
 }
 
-
+void Engine::prepare() {
+    InitWindow();
+    m_VulkanRHI->CreateInstance();
+    m_PhysicalDevice->pickPhysicalDevice();
+    m_LogicalDevice->createLogicalDevice();
+    m_SwapChain->createSwapChain();
+    m_SyncObject->createSyncObjects();
+    
+    m_PhysicalDevice->createSurface();
+    m_CommandPool->createCommandPool();
+    m_ImageView->createImageViews();
+    m_RenderPass->createRenderPass();
+    m_ImageView->createDepthResources();
+    m_FrameBuffer->createFramebuffers();
+}
 

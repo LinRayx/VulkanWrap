@@ -36,8 +36,10 @@ public:
     void cleanup();
     void run();
     
+    virtual void prepare();
+    
     void updateUniformBuffer(uint32_t currentImage);
-    static Engine* GetInstance();
+    
     
     ~Engine() {}
     KYPtr<VulkanRHI> GetVulkanRHI();
@@ -57,7 +59,7 @@ public:
     KYPtr<VulkanRHI>        m_VulkanRHI;
     
 private:
-    Engine() {}
+    
     GLFWwindow* window;
     static Engine* m_Engine;
     static void framebufferResizeCallback(GLFWwindow* window, int width, int height) {
